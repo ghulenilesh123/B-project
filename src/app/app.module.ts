@@ -41,7 +41,7 @@ import { MiscParentComponent } from './misc/misc-parent/misc-parent.component';
 import { AuthInterceptor } from './all_service/service/auth.interceptor';
 import { MiscChild2Component } from './misc/misc-child2/misc-child2.component';
 import { TestComponent } from './practice_compo/test/test.component';
-import { DemoComponent } from './demo/demo.component';
+import { FirtLoginComponent } from './firt-login/firt-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +71,7 @@ import { DemoComponent } from './demo/demo.component';
     MiscParentComponent,
     MiscChild2Component,
     TestComponent,
-    DemoComponent,
+    FirtLoginComponent,
   ],
   imports: [
     BrowserModule,

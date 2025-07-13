@@ -24,9 +24,11 @@ import { ChartJsComponent } from './Library/chart-js/chart-js.component';
 import { authResolver ,authCanDeactivateGuard, authChildGuard, authGuard, authloadGuards} from './guards/auth.guard';
 import { MiscParentComponent } from './misc/misc-parent/misc-parent.component';
 import { MiscChildComponent } from './misc/misc-child/misc-child.component';
+import { FirtLoginComponent } from './firt-login/firt-login.component';
 
 const rot: Routes = [
-  { path: " ", component: HomeComponent },
+  {path:"",component:FirtLoginComponent},
+  { path: "home", component: HomeComponent },
   { path: "motor", component: MotorInsuranceComponent },
   // {path:"crpr",component:CorporateComponent},
   { path: "health", component: HealthComponent },
@@ -83,7 +85,7 @@ const rot: Routes = [
     .then(module=>module.GaurdsModuleModule)
    },
 
-  { path: "**", redirectTo: " " }, // wild card 
+  { path: "**", redirectTo: "" }, // wild card 
 
 ];
 

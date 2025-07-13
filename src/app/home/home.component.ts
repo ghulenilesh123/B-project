@@ -16,16 +16,10 @@ constructor( private login:LoginServiceService){
 
 reaciveEvent(event:any){
    this.xyz=event
-   console.log(this.xyz)
+   console.log(this.xyz)// ckeck html
 }
 
-loginapp(){
-  this.login.login()
-}
 
-logoutapp(){
-  this.login.logout()
-}
 
 
 

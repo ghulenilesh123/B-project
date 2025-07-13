@@ -21,8 +21,10 @@ export class LoginServiceService {
    return  this.loggedin
   }
 
-  login (){
-    this.loggedin=true
+  login (username:any,password:any){
+    if(username=='nilesh'&&password=='123'){
+      this.loggedin=true
+    }
   }
 
   logout(){
