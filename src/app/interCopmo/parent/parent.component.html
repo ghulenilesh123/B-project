@@ -1,0 +1,10 @@
+<div class="container parent">
+<p>parent works!</p>
+
+<!-- {{recievedDataFromChild2}} -->
+
+{{recievedDataFromChild}}
+<app-child
+[reaciveparentdt]="dataFromParentToChild"
+(sendEvent)="reacievevent($event)"></app-child>
+</div>

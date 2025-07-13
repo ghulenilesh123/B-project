@@ -1,0 +1,8 @@
+.my-orange {
+  background-color: orange;
+  color: white;
+}
+/* ------------------------------------ */
+.my-no-hover.mat-button.mat-primary .mat-button-focus-overlay {
+  background-color: transparent;
+}

@@ -1,0 +1,6 @@
+.health{
+    height: 400px;
+    width: 450px;
+    background-color: rgba(0, 255, 21, 0.432);
+    border: 6px solid  rgb(0, 255, 21)
+}

@@ -1,0 +1,8 @@
+.ifBlock{
+    border: 2px solid red;
+}
+
+.ngTemplateBlock{
+    border: 2px solid blue;
+
+}

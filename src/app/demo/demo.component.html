@@ -1,0 +1,39 @@
+<p>demo works!</p>
+
+
+<form [formGroup]="myform" (ngSubmit)="submit()">
+
+  <label for="name">name</label>
+  <input type="text" name="name" class="form-control" formControlName="name">
+
+
+  <label for="name">lname</label>
+<input type="text" name="lname" class="form-control" formControlName="lname">
+
+  
+  <label for="">password</label>
+  <input type="password" name="pass" class="form-control" formControlName="pass">
+
+
+  <button class="btn btn-info"> submit </button>
+
+
+</form>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>lname</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let listdt of listdata">
+            <td> {{listdt.name}}</td>
+            <td> {{listdt.lname}}</td>
+            <td> {{listdt.pass}}</td>
+
+        </tr>
+    </tbody>
+</table>

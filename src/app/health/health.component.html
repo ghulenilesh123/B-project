@@ -1,0 +1,13 @@
+
+<div class="container health">
+  <h1>health works!</h1>
+      {{get}} <br>
+    <div class="container">
+       <Button class="btn btn-info m-3"  (click)=" sendData() "> send data</Button>
+        <Button class="btn btn-warning m-3 " (click)="getData()">get data</Button>
+   </div>
+
+   <app-child
+      [reacivehealth]="detafromhealth"
+   ></app-child>
+</div> 

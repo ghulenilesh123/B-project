@@ -1,0 +1,6 @@
+.motor{
+    height: 150px;
+    width: 400px;
+    background-color: rgba(247, 8, 8, 0.432);
+    border: 6px solid rgba(247, 8, 8, 0.349)
+}

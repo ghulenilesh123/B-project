@@ -1,0 +1,32 @@
+<h1>practice 1</h1>
+
+
+<div class="border border-2 border-success">
+    <div *ngIf="showdata else falsecondition  ">
+        <p>using ng template true condition</p>
+    </div>
+    <ng-template #falsecondition>
+        <p>using ng tamplate false condition</p>
+    </ng-template>
+
+</div>
+
+<app-practice2>
+    <h5> [using ng-content]</h5>
+    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa laudantium debitis sunt itaque tempora atque
+        nisi fugiat eos iste enim dolore consequuntur fuga, repudiandae, repellat sapiente reiciendis nam distinctio
+        voluptatem.</p>
+    <hr>
+    <h5> [using contentChild]</h5>
+    <p #pcontent> ipsum dolor sit amet consectetur adipisicing elit. Ratione, minus odio et fugit error expedita aliquam
+        placeat aut totam illo, porro sunt blanditiis. Pariatur hic saepe porro harum. Error, sapiente?</p>
+</app-practice2>
+<br><hr>
+<h5>hostbinding and hostlistenr</h5>
+<app-test></app-test>
+
+<hr>
+<ng-container *ngFor="let i of myarray">
+ <div>using   ng-container {{i}}</div>
+</ng-container>
+

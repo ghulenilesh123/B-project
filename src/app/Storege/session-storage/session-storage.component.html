@@ -1,0 +1,48 @@
+<p>session-storage works!</p>
+<h4>session Storage</h4>
+<div class="container">
+    <form [formGroup]="myform" (ngSubmit)="setData()">
+        <div>
+            <label for="">name</label>
+            <input type="text" name="name" class="form-control" formControlName="name">
+        </div><div>
+            <label for="">lname</label>
+            <input type="text" name="lname" class="form-control" formControlName="lname">
+        </div><div>
+            <label for="">job</label>
+            <input type="text" name="job" class="form-control" formControlName="job">
+        </div><div>
+            <label for="">email</label>
+            <input type="email" name="email" class="form-control" formControlName="email">
+        </div><div>
+            <label for="">ege</label>
+            <input type="text" name="age" class="form-control" formControlName="age">
+        </div><div>
+            <label for="">pass</label>
+            <input type="password" name="pass" class="form-control" formControlName="pass">
+        </div>
+        <div>
+            <button class="btn btn-info m-3" type="text" >set Data frm compo1 to_S_storage</button>
+        </div>
+    </form>
+</div>
+<button type="submit" class="btn btn-warning ms-4" (click)="getData()">get data frm S_storage</button>
+
+<table class="table table-bordered">
+    <tr>
+        <th>name</th>
+        <th>lname</th>
+        <th>age</th>
+        <th>job</th>
+        <th>email</th>
+        <th>password</th>
+    </tr>
+    <tr>
+        <td>{{res1}}</td>
+        <td>{{res2}}</td>
+        <td>{{res3}}</td>
+        <td>{{res4}}</td>
+        <td>{{res5}}</td>
+        <td>{{res6}}</td>
+    </tr>
+</table>

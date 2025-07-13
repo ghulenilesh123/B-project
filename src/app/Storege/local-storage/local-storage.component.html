@@ -1,0 +1,67 @@
+<p>local-storage works!</p>
+<h4>Local Storage</h4>
+<div class="container">
+    <form [formGroup]="myform" (ngSubmit)="setData()">
+        <div>
+            <label for="">name</label>
+            <input type="text" name="name" class="form-control" formControlName="name">
+        </div><div>
+            <label for="">lname</label>
+            <input type="text" name="lname" class="form-control" formControlName="lname">
+        </div><div>
+            <label for="">job</label>
+            <input type="text" name="job" class="form-control" formControlName="job">
+        </div><div>
+            <label for="">email</label>
+            <input type="email" name="email" class="form-control" formControlName="email">
+        </div><div>
+            <label for="">ege</label>
+            <input type="text" name="age" class="form-control" formControlName="age">
+        </div><div>
+            <label for="">pass</label>
+            <input type="password" name="pass" class="form-control" formControlName="pass">
+        </div>
+        <div>
+            <button class="btn btn-info m-3" type="text" >set Data frm compo1 to_L_storage</button>
+        </div>
+    </form>
+</div>
+<button type="submit" class="btn btn-warning ms-4" (click)="getData()">get data frm L_storage</button>
+
+<table class="table table-bordered">
+    <tr>
+        <th>name</th>
+        <th>lname</th>
+        <th>age</th>
+        <th>job</th>
+        <th>email</th>
+        <th>password</th>
+    </tr>
+    <tr>
+        <td>{{res1}}</td>
+        <td>{{res2}}</td>
+        <td>{{res3}}</td>
+        <td>{{res4}}</td>
+        <td>{{res5}}</td>
+        <td>{{res6}}</td>
+    </tr>
+</table>
+ <h1>cookies data</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>name</th>
+        <th>lname</th>
+        <th>age</th>
+        <th>job</th>
+        <th>email</th>
+        <th>password</th>
+    </tr>
+    <tr>
+        <td>{{res7}}</td>
+        <td>{{res8}}</td>
+        <td>{{res9}}</td>
+        <td>{{res10}}</td>
+        <td>{{res11}}</td>
+        <td>{{res12}}</td>
+    </tr>
+</table>

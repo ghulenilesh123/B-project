@@ -1,0 +1,47 @@
+<p>misc-parent works!</p>
+<app-misc-child2></app-misc-child2>
+<!-- <div *ngIf="isshowdata"> ng templete testing data using *ngif </div>
+<div *ngIf="!isshowdata"> ng templete testing data using false </div> -->
+
+<!-- ng template -->
+<div *ngIf="isshowData else showFalseTemplate">
+    <p>This is the data for true condition with ng-template </p>
+</div>
+
+<ng-template #showFalseTemplate>
+    <p>This is the data for false condition with ng-template </p>
+</ng-template>
+
+<!-- ng content -->
+<app-misc-child>
+    <p> this data use to test ng content</p>
+<!-- contentCild -->
+    <p #contentFromParent> this data use to test ng content</p>
+
+</app-misc-child>
+
+
+<p>This is ng-container</p>
+<!-- <div *ngFor="let dt of testData" *ngIf="isShowData">
+    {{dt}}
+ </div> -->
+
+<!-- we can resolve above issue by adding one extra div. -->
+<!-- but if we don't want that extra div then what  -->
+<div *ngIf="isShowData">
+    <div *ngFor="let dt of testData">
+        {{dt}}
+    </div> <!--first way-->
+</div>
+
+<hr class="mt-2">
+
+<ng-container *ngIf="isShowData">
+    <div *ngFor="let dt of testData">
+        {{dt}} <!--second way-->
+    </div>
+</ng-container>
+
+
+
+<!-- ========= -->
