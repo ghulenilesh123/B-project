@@ -28,7 +28,7 @@ export class AppComponent {
         if(this.showHeader)
           false
         else
-          this.router.navigate(['']);
+          this.logout()
       }
     })
   }

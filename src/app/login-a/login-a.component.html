@@ -1,0 +1,43 @@
+<p>login-a works!</p>
+
+<div class="container col-lg-4 border border-4 border-info">
+    <form [formGroup]="signupform" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="username">Name:</label>
+            <input type="text" name="name" class="form-control" formControlName="name" >
+        </div>
+        <div>
+            <label for="username">Last Name:</label>
+            <input type="text" name="lname" class="form-control" formControlName="lname" >
+        </div>
+        <div>
+            <label for="username">Email:</label>
+            <input type="email" name="email" class="form-control" formControlName="email" >
+        </div>
+        <div>
+            <label for="username">Job:</label>
+            <input type="text" name="job" class="form-control" formControlName="job" >
+        </div>
+        <div>
+            <label for="username">Gender:</label>
+            <label for="username">Male:</label>
+            <input type="radio" name="Gender" value="male"  formControlName="Gender" >
+            <label for="username">Female:</label>
+            <input type="radio" name="Gender" value="male"  formControlName="Gender" >
+        </div>
+        <div>
+            <label for="username">Password:</label>
+            <input type="Password" name="Password" class="form-control" formControlName="Password" >
+        </div>
+       
+        <div>
+            <button class=" btn btn-primary form-control">Sign Up</button>
+        </div>
+    </form>
+</div>
+<!-- <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <input formControlName="username" placeholder="Username" required>
+  <input formControlName="password" type="password" placeholder="Password" required>
+  <button type="submit">Sign Up</button>
+</form>
+<a routerLink="practice2">Already have an account? Login</a> -->

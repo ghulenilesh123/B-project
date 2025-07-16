@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class MiscParentComponent {
 
-  isshowData:boolean=false;
+   showdata:boolean =false ;
+  myarray:any=[1,2,3,4,5,6,7] 
 
-  testData:any=[1,2,3,2,4]
   isShowData:boolean=true
 
 }

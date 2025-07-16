@@ -14,7 +14,6 @@ import { InnerChildComponent } from './interCopmo/parent/inner-child/inner-child
 import { Parent2Component } from './interCopmo/parent/parent2/parent2.component';
 import { CompoAComponent } from './interCopmo/compo-a/compo-a.component';
 import { CompoBComponent } from './interCopmo/compo-b/compo-b.component';
-import { Practice1Component } from './practice_compo/practice1/practice1.component'; 
 import { Practice2Component } from './practice_compo/practice2/practice2.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LocalStorageComponent } from './Storege/local-storage/local-storage.component';
@@ -41,7 +40,13 @@ import { MiscParentComponent } from './misc/misc-parent/misc-parent.component';
 import { AuthInterceptor } from './all_service/service/auth.interceptor';
 import { MiscChild2Component } from './misc/misc-child2/misc-child2.component';
 import { TestComponent } from './practice_compo/test/test.component';
-import { FirtLoginComponent } from './firt-login/firt-login.component';
+// import { FirtLoginComponent } from './first-login/first-login.component';
+import { Practice1Component } from './practice_compo/practice-1/practice-1.component';
+import { FLoginComponent } from './first-login/f-login/f-login.component';
+import { LoginAComponent } from './login-a/login-a.component';
+import { SassCompoComponent } from './ALL-css-pattern/sass-compo/sass-compo.component';
+import { LessCompoComponent } from './ALL-css-pattern/less-compo/less-compo.component';
+import { ScssCompoComponent } from './ALL-css-pattern/scss-compo/scss-compo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +60,6 @@ import { FirtLoginComponent } from './firt-login/firt-login.component';
     Parent2Component,
     CompoAComponent,
     CompoBComponent,
-    Practice1Component,
     Practice2Component,
     LocalStorageComponent,
     SessionStorageComponent,
@@ -71,7 +75,12 @@ import { FirtLoginComponent } from './firt-login/firt-login.component';
     MiscParentComponent,
     MiscChild2Component,
     TestComponent,
-    FirtLoginComponent,
+    Practice1Component,
+    FLoginComponent,
+    LoginAComponent,
+    SassCompoComponent,
+    LessCompoComponent,
+    ScssCompoComponent,
   ],
   imports: [
     BrowserModule,

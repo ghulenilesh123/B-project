@@ -1,47 +1,33 @@
-<p>misc-parent works!</p>
-<app-misc-child2></app-misc-child2>
-<!-- <div *ngIf="isshowdata"> ng templete testing data using *ngif </div>
-<div *ngIf="!isshowdata"> ng templete testing data using false </div> -->
-
-<!-- ng template -->
-<div *ngIf="isshowData else showFalseTemplate">
-    <p>This is the data for true condition with ng-template </p>
-</div>
-
-<ng-template #showFalseTemplate>
-    <p>This is the data for false condition with ng-template </p>
-</ng-template>
-
-<!-- ng content -->
-<app-misc-child>
-    <p> this data use to test ng content</p>
-<!-- contentCild -->
-    <p #contentFromParent> this data use to test ng content</p>
-
-</app-misc-child>
+<h1>practice 1</h1>
 
 
-<p>This is ng-container</p>
-<!-- <div *ngFor="let dt of testData" *ngIf="isShowData">
-    {{dt}}
- </div> -->
-
-<!-- we can resolve above issue by adding one extra div. -->
-<!-- but if we don't want that extra div then what  -->
-<div *ngIf="isShowData">
-    <div *ngFor="let dt of testData">
-        {{dt}}
-    </div> <!--first way-->
-</div>
-
-<hr class="mt-2">
-
-<ng-container *ngIf="isShowData">
-    <div *ngFor="let dt of testData">
-        {{dt}} <!--second way-->
+<div class="border border-2 border-success">
+    <div *ngIf="showdata else falsecondition  ">
+        <p>using ng template true condition</p>
     </div>
+    <ng-template #falsecondition>
+        <p>using ng tamplate false condition</p>
+    </ng-template>
+
+</div>
+
+<app-misc-child2>
+    <h5> [using ng-content]</h5>
+    <p> Lorem 1 ipsum, dolor sit amet consectetur adipisicing elit. Culpa laudantium debitis sunt itaque tempora atque
+        nisi fugiat eos iste enim dolore consequuntur fuga, repudiandae, repellat sapiente reiciendis nam distinctio
+        voluptatem.</p>
+    <hr>
+    <h5> [using contentChild]</h5>
+    <p #pcontent> 2 ipsum dolor sit amet consectetur adipisicing elit. Ratione, minus odio et fugit error expedita aliquam
+        placeat aut totam illo, porro sunt blanditiis. Pariatur hic saepe porro harum. Error, sapiente?</p>
+</app-misc-child2>
+<br><hr>
+<h5>hostbinding and hostlistenr</h5>
+<app-test></app-test>
+ <!-- <app-misc-child></app-misc-child> -->
+
+<hr>
+<ng-container *ngFor="let i of myarray">
+ <div>using   ng-container {{i}}</div>
 </ng-container>
 
-
-
-<!-- ========= -->

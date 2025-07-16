@@ -1,0 +1,9 @@
+<h2>Sign Up</h2>
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <input formControlName="username" placeholder="Username" required>
+  <input formControlName="password" type="password" placeholder="Password" required>
+  <input formControlName="lname" type="text" placeholder="lname" required>
+  <input formControlName="job" type="job" placeholder="job" required>
+  <button type="submit">Sign Up</button>
+</form>
+<a routerLink="/login">Already have an account? Login</a>

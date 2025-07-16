@@ -1,0 +1,49 @@
+.font{
+  font-family: "Alfa Slab One", serif;
+  font-weight:200px;
+  font-size: 90px;
+  /* font-style: normal; */
+  color:rgb(192, 28, 28);
+  /* background-color: aqua; */
+ 
+
+}
+.main-row{
+  margin-top: 150px;
+
+   
+  .w{
+      color: rgb(10, 137, 234);
+      margin-left: 220px;
+    }
+    .to{
+      margin-left: 366px;
+      color: rgb(123, 197, 13);
+    }
+    .code{
+      color: rgb(176, 7, 233);
+      margin-left: 137px;
+
+    }
+
+}
+
+
+:host {
+  display: block;
+  height: 100vh;
+  background-image: url('/assets/357800.jpg'); /* ← This must begin with `/` */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.login-form{
+    background-color: rgb(156, 27, 27);
+    width:390px;
+    margin-top:80px;
+    margin-left:110px;
+}
+

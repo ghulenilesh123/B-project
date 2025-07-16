@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "9be8",
+      "name": "mm",
+      "lname": "cc",
+      "email": "ccc",
+      "job": "cc",
+      "Gender": "male",
+      "Password": "cc"
+    },
+    {
+      "id": "0e58",
+      "username": "nilesh",
+      "password": "123",
+      "email": "ghulenilesh34@gmail.com"
+    }
+  ]
+}

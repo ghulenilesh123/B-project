@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": "3824",
+      "username": "www",
+      "password": "ssss"
+    },
+    {
+      "id": "3779",
+      "username": "aaa",
+      "password": "ssss"
+    },
+    {
+      "id": "fdc5",
+      "username": "ghghg",
+      "password": "fgrgrr"
+    },
+    {
+      "id": "6907",
+      "username": "nilesh",
+      "password": "123",
+      "email": "ghulenilesh34@gmail.com"
+    },
+    {
+      "id": "538c",
+      "username": "bvbvbv",
+      "password": "gfgvfvedew",
+      "lname": "dqwawaqe2",
+      "job": "esqadweweqa"
+    },
+    {
+      "id": "f3b9",
+      "username": "dasdsa",
+      "password": "wqwawee",
+      "lname": "ewedw",
+      "job": "dsxa"
+    },
+    {
+      "id": "33d4",
+      "name": "Nileshfgfgfgf",
+      "lname": "Ghule",
+      "email": "ghulenilesh34@gmail.com",
+      "job": "xyz ",
+      "Gender": "",
+      "Password": "123"
+    },
+    {
+      "id": "1bfe",
+      "username": "nilesh",
+      "password": "123",
+      "email": "ghulenilesh34@gmail.com"
+    }
+  ]
+}

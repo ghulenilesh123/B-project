@@ -9,8 +9,8 @@ import { ParentComponent } from './interCopmo/parent/parent.component';
 import { Parent2Component } from './interCopmo/parent/parent2/parent2.component';
 import { CompoAComponent } from './interCopmo/compo-a/compo-a.component';
 import { CompoBComponent } from './interCopmo/compo-b/compo-b.component';
-import { Practice1Component } from './practice_compo/practice1/practice1.component';
 import { Practice2Component } from './practice_compo/practice2/practice2.component'; 
+import { Practice1Component } from './practice_compo/practice-1/practice-1.component';
 import { LocalStorageComponent } from './Storege/local-storage/local-storage.component';
 import { SessionStorageComponent } from './Storege/session-storage/session-storage.component';
 import { InterceptorComponent } from './interceptor/interceptor.component';
@@ -24,10 +24,12 @@ import { ChartJsComponent } from './Library/chart-js/chart-js.component';
 import { authResolver ,authCanDeactivateGuard, authChildGuard, authGuard, authloadGuards} from './guards/auth.guard';
 import { MiscParentComponent } from './misc/misc-parent/misc-parent.component';
 import { MiscChildComponent } from './misc/misc-child/misc-child.component';
-import { FirtLoginComponent } from './firt-login/firt-login.component';
+import { FLoginComponent } from './first-login/f-login/f-login.component';
+import { LoginAComponent } from './login-a/login-a.component';
 
 const rot: Routes = [
-  {path:"",component:FirtLoginComponent},
+  {path:"login",component:LoginAComponent},
+  {path:"",component:FLoginComponent},
   { path: "home", component: HomeComponent },
   { path: "motor", component: MotorInsuranceComponent },
   // {path:"crpr",component:CorporateComponent},
@@ -36,8 +38,8 @@ const rot: Routes = [
   { path: "parent2", component: Parent2Component },
   { path: "Compo-A", component: CompoAComponent },
   { path: "Compo-B", component: CompoBComponent },
-  { path: "practice1", component: Practice1Component, },
   { path: "practice2", component: Practice2Component },
+  { path: "practice1", component: Practice1Component },
   { path: "local_s", component: LocalStorageComponent },
   { path: "session_s", component: SessionStorageComponent },
   { path: "intercepter", component: InterceptorComponent },

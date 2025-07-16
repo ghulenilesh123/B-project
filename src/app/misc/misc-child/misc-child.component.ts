@@ -7,15 +7,16 @@ import { Component, ContentChild, ElementRef } from '@angular/core';
 })
 export class MiscChildComponent {
 
+@ContentChild("pcontent") recive!:ElementRef
 
-  @ContentChild('contentFromParent') contentFromParentComp!: ElementRef;
-// ng content
-  ngAfterContentInit(){
-    console.log(this.contentFromParentComp.nativeElement);
-    this.contentFromParentComp.nativeElement.style.color = "red";
-    this.contentFromParentComp.nativeElement.style.backgroundColor = "yellow";
-    this.contentFromParentComp.nativeElement.style.border="2px solid black";
-    this.contentFromParentComp.nativeElement.style.width="50%";
-  }
+ngAfterContentInit(){
+  this.recive.nativeElement.style.color = "red"
+  this.recive.nativeElement.style.backgroundColor = "lightgreen"
+  this.recive.nativeElement.style.border= "4px solid black"
+
+  this.recive.nativeElement.style.width = "50%"
+  this.recive.nativeElement.style.hieght = "400px"
+}
+
 }
 

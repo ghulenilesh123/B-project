@@ -15,17 +15,28 @@ export class LoginServiceService {
 
   //   }
 
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient) {
+
+    let password2 =sessionStorage.getItem("password2")
+   }
 
   isLoggedIn(){
    return  this.loggedin
   }
-
+  
   login (username:any,password:any){
     if(username=='nilesh'&&password=='123'){
       this.loggedin=true
     }
   }
+  
+  login2(dt:any){
+  return this.http.post("http://localhost:3000/users",dt)
+}
+// getlogindata(password:any){
+//   return this.http.get("http://localhost:3000/user"+password)
+// }
+
 
   logout(){
     this.loggedin=false

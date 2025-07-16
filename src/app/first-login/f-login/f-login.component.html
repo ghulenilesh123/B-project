@@ -1,0 +1,92 @@
+<div class="container  ">
+  <div class="row  ">
+    <div class="col-7 font main-row "><span class="w">W</span>lcome <br><span class="to">to</span> <br><span
+        class="code">Nilesh code </span></div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm login-form ">
+        <div class="card-header text-center bg-primary text-white">
+          <h4 class="mb-0">Login</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf='showform'>
+            <div class="mb-3">
+              <label for="username" class="form-label"><b><b>Username</b></b></label>
+              <input type="text" id="username" class="form-control " formControlName="username"
+                [ngClass]="{ 'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.touched }" />
+              <div class="invalid-feedback">
+                Username is required
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label"><b><b>email</b></b></label>
+              <input type="email " id="email" class="form-control" formControlName="email"
+                [ngClass]="{ 'is-invalid': loginForm.get('email')?.invalid && loginForm.get('email')?.touched }" />
+              <div class="invalid-feedback">
+                email is required
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label"><b><b>Password</b></b></label>
+              <input type="password " id="password" class="form-control" formControlName="password"
+                [ngClass]="{ 'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched }" />
+              <div class="invalid-feedback">
+                Password is required
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">
+              Login
+            </button>
+
+            <div *ngIf="showLoginError" class="warning">
+              Please try again
+            </div>
+          </form>
+          <form [formGroup]="myform2" (ngSubmit)='onSubmit2()' *ngIf="!showform">
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password " id="password" class="form-control" formControlName="password"
+                [ngClass]="{ 'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.touched }" />
+              <div class="invalid-feedback">
+                Password is required
+              </div>
+            </div>
+            <button type="submit" class=" button w-100">
+              Login
+            </button>
+
+            <div *ngIf="showLoginError" class="warning">
+              Please try again
+            </div>
+          </form>
+
+          <div class="mt-3"><b><u class="ms-5" (click)="signin()" class="ms-4 ">Don't have an Account</u></b>
+            <b class="ms-5" (click)="signup()"><u>Sign up Here</u></b><br>
+          </div>
+          <div class="mt-3"> <u class="ms-5 mt-4"><b class="ms-5"><b class="ms-5 "><u>Log In With</u></b></b></u></div>
+
+          <div class="row">
+            <div class="col mt-">
+              <span><a href="https://www.instagram.com"><img src="../assets/insta.png" style="width: 50px;height: 50px;"
+                    class="ms-4"></a></span>
+              <span><a href="https://www.facebook.com"><img src="../assets/fb.png" style="width: 50px;height: 50px;"
+                    class=""></a></span>
+              <span><a href="https://twitter.com"><img src="../assets/x.png" style="width: 50px;height: 50px;"
+                    class="ms-3"></a></span>
+              <span><a href="https://www.facebook.com/TwitterInc/"><img src="../assets/twiter.png"
+                    style="width: 75px;height: 75px;" class="ms-2"></a></span>
+              <span><a href="https://www.youtube.com"><img src="../assets/youtub.png" style="width: 75px;height: 75px;"
+                    class="ms-2"></a></span>
+            </div>
+            <div class="mt-2"> <u class="ms-5 "><b class="ms-5"><b class="ms-3 "><u>Forgot password</u></b></b></u>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

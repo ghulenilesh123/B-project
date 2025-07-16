@@ -7,28 +7,57 @@ import { Component, HostBinding, HostListener } from '@angular/core';
 })
 export class MiscChild2Component {
 @HostBinding('style.backgroundColor') bgColor:string ="lightgreen";
+@HostBinding("style.background") bgcolor:string="red" 
+@HostBinding("style.color")color:string="black" 
+@HostBinding("style.font-size") font:any="16px" 
+
+// @HostBinding("style.color")color:string="black"
+
+@HostListener('click',['$event'])
+ onClick(event:Event){
+  console.log("on click event is fired");
+ this.bgcolor='black'
+ this.color="aqua"
+ this.font="16px"
+
+}
 
 
-// @HostListener('mouseover',['$event'])
-// onMouseOver(event:Event){
-//   console.log("Mouse over event is fired");
-//   this.bgColor = "red";
-// }
+@HostListener('dblclick',['$event'])
+onDblClick(event:Event){
+  console.log("db click event is fired");
 
-// @HostListener('mouseleave',['$event'])
-// onMouseLeave(event:Event){
-//   console.log("Mouse leave event is fired");
-//   this.bgColor = "yellow";
-// }
+this.color='black'
+ this.bgcolor='green'
+ this.font="30px"
 
-// @HostListener('click',['$event'])
-// onClick(event:Event){
-//   console.log("on click event is fired");
-//   this.bgColor = "blue";
-// }
-myEvent(){
-    console.log("Hello u have fired event");
-  }
+}
+
+
+@HostListener('mouseover',['$event'])
+onMouseover(event:Event){
+  console.log("mover event is fired");
+
+this.color='red'
+//  this.bgcolor='aqua'
+
+
+}
+
+// click              => When mouse button is clicked
+// dblclic            => When mouse is double-clicked
+// mousedown	         => When mouse button is pressed down
+// mouseup	           => When mouse button is released
+// mouseenter         => When mouse enters element
+// mouseleave         => When mouse leaves element
+// mousemove          => When mouse moves inside element
+// mouseover	         => When mouse moves over element
+// mouseout           => When mouse moves out of element
+// contextmenu        => Right-click on the element
+// wheel / mousewheel => Mouse wheel scrolled
+
+
+
 
 
 }

@@ -1,5 +1,8 @@
 import { Component, ContentChild, ElementRef, HostBinding, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-practice2',
@@ -8,15 +11,31 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class Practice2Component {
 
-@ContentChild("pcontent") recive!:ElementRef
+loginForm: FormGroup;
 
-ngAfterContentInit(){
-  this.recive.nativeElement.style.color = "red"
-  this.recive.nativeElement.style.backgroundColor = "lightgreen"
-  this.recive.nativeElement.style.border= "4px solid black"
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+    private router: Router
+  ) {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+  }
 
-  this.recive.nativeElement.style.width = "50%"
-  this.recive.nativeElement.style.hieght = "400px"
-}
+  onSubmit() {
+    const { username, password } = this.loginForm.value;
 
+    this.http.get<any[]>(`http://localhost:3000/users?username=${username}&password=${password}`)
+      .subscribe(users => {
+        if (users.length > 0) {
+          alert('Login successful!');
+          this.router.navigateByUrl('home')
+          // Redirect or set login state here
+        } else {
+          alert('Invalid username or password!');
+        }
+      });
+  }
 }
