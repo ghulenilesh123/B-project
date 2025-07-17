@@ -1,19 +1,34 @@
 {
-  "users": [
+  "prasad": [
     {
-      "id": "9be8",
-      "name": "mm",
-      "lname": "cc",
-      "email": "ccc",
-      "job": "cc",
-      "Gender": "male",
-      "Password": "cc"
-    },
+      "id": "f801",
+      "username": "user",
+      "password": "123"
+    }
+  ],
+  "nilesh": [
     {
-      "id": "0e58",
-      "username": "nilesh",
-      "password": "123",
-      "email": "ghulenilesh34@gmail.com"
+      "section1": [
+        {
+          "id": "f801",
+          "username": "sec1-emp1",
+          "password": "123"
+        }
+      ],
+       "section2": [
+        {
+          "id": "f801",
+          "username": "sec2-emp1",
+          "password": "123"
+        }
+      ]
+    }
+  ],
+  "rahul": [
+    {
+      "id": "f801",
+      "username": "xyz",
+      "password": "123"
     }
   ]
 }

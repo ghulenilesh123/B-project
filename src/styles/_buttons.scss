@@ -2,9 +2,7 @@
   padding: $padding;
   background-color: $primary-color;
   border: 3px solid red;
-  // @include flex-center;
+  @include flex-center;
 
-  &:hover {
-    background-color: darken($primary-color, 10%);
-  }
+ 
 }

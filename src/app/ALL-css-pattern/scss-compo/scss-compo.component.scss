@@ -1,0 +1,103 @@
+// variable 
+$myred: red;
+$mygreen: green;
+$myblue: blue;
+$myblack: black;
+$myaqua: aqua;
+$mybgcolor: lightgreen;
+
+$mypadding: 20px;
+$mymargin: 20px;
+$myborder: 5px solid black;
+
+
+//mixing
+@mixin mix {
+    
+    font-size: 20px;
+    padding: $mypadding;
+    margin-left: $mymargin;
+    border: $myborder;
+}
+
+//nesting 
+.parent {
+    background-color: $mybgcolor ;
+    color:$myaqua;
+
+    margin:calculate-rem(32);
+    
+    .child {
+        color: $myblack;
+        
+        .subchild {
+            color: $myblue;
+        };
+    };
+    @include mix;
+};
+
+
+.button{
+    background-color: chocolate;
+    // margin:calculate-rem(32);
+     // ineritence
+    @extend .parent;
+};
+
+
+
+//  Function colling
+@function calculate-rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+// Reusable Variables
+$mybroun: rgb(128, 0, 0);
+$mywight: white;
+
+// Function body
+.card {
+  background-color: $mybroun;
+  color: $mywight;
+//   padding: calculate-rem(32);     // 2rem
+  margin: calculate-rem(16);      // 1rem
+  font-size: calculate-rem(18);   // 1.125rem
+  border-radius: calculate-rem(8); // 0.5rem
+  text-align: center;
+}
+
+// Operators
+.button2{
+    background-color: chocolate;
+    padding: $mypadding + 50 ;
+}
+
+
+//loops
+$colorbox: red, green, blue;
+
+@each $color in $colorbox {
+  .text-#{$color} {
+    color: $color;
+  }
+}
+
+
+
+// conditionals 
+.button3{
+    padding: $mypadding * 5 ;
+    @if $myblue == blue {
+        background-color: aqua;
+    } @else {
+        background-color:brown;
+    }
+}
+
+// Partials/Imports  
+
+
+
+
+

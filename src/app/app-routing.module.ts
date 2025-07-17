@@ -26,10 +26,13 @@ import { MiscParentComponent } from './misc/misc-parent/misc-parent.component';
 import { MiscChildComponent } from './misc/misc-child/misc-child.component';
 import { FLoginComponent } from './first-login/f-login/f-login.component';
 import { LoginAComponent } from './login-a/login-a.component';
+import { SassCompoComponent } from './ALL-css-pattern/sass-compo/sass-compo.component';
+import { LessCompoComponent } from './ALL-css-pattern/less-compo/less-compo.component';
+import { ScssCompoComponent } from './ALL-css-pattern/scss-compo/scss-compo.component';
 
 const rot: Routes = [
-  {path:"login",component:LoginAComponent},
-  {path:"",component:FLoginComponent},
+  {path:"",component:LoginAComponent},
+  // {path:"",component:FLoginComponent},
   { path: "home", component: HomeComponent },
   { path: "motor", component: MotorInsuranceComponent },
   // {path:"crpr",component:CorporateComponent},
@@ -49,6 +52,10 @@ const rot: Routes = [
   { path: "chart", component: ChartJsComponent },
   { path: "misc_parent", component: MiscParentComponent },
   { path: "misc_child", component: MiscChildComponent },
+
+  { path: "scss", component: ScssCompoComponent},
+  { path: "less", component:LessCompoComponent },
+  { path: "sass", component:SassCompoComponent },
 
   { path: "car/:input", component: CarDatailsComponent },
 

@@ -42,11 +42,11 @@ constructor(
     const { username } = this.signupform.value;
 
     // Check if username already exists
-    this.http.get<any[]>(`http://localhost:3000/users?username=${username}`).subscribe(users => {
+    this.http.get<any[]>(`http://localhost:5000/users?username=${username}`).subscribe(users => {
       if (users.length > 0) {
         alert('Username already exists!');
       } else {
-        this.http.post('http://localhost:3000/users', this.signupform.value).subscribe(() => {
+        this.http.post('http://localhost:5000/users', this.signupform.value).subscribe(() => {
           alert('Signup successful!');
           this.router.navigate(['home']);
         });
