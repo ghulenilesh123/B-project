@@ -51,6 +51,12 @@ return this.currrntmessege
     // }
 
   }
-
+  // ===============================
+login(data: { email: string; password: string }) {
+  return this.http.post<any>('http://localhost:3000/login', data);
+}
+  get (){
+    return this.http.get('http://localhost:1000/login')
+  }
 
 }

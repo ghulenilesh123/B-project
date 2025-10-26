@@ -10,34 +10,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./practice-1.component.css']
 })
 export class Practice1Component {
-  signupForm: FormGroup;
-constructor(
-    private fb: FormBuilder,
-    private http: HttpClient,
-    private router: Router
-  ) {
-    this.signupForm = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
-      lname: ['', Validators.required],
-      job: ['', Validators.required]
-    });
-  }
+  public facebookImg: string = "../../../../assets/claimsModuleImages/fb-ico.svg"
+  public linkedinImg: string = "../../../../assets/claimsModuleImages/lin-ico.svg"
+  public twtImg: string = "../../../../assets/claimsModuleImages/tw-ico.svg"
+  public youtubeImg: string = "../../../../assets/claimsModuleImages/yt-ico.svg"
+  public instagramImg: string = "../../../../assets/claimsModuleImages/inst-ico.svg"
 
-  onSubmit() {
-    const { username } = this.signupForm.value;
+  public entrustImg: string = "../../../../assets/claimsModuleImages/entrust.png"
+  public digicertImg: string = "../../../../assets/claimsModuleImages/digicert.png"
+ 
+   public mail: any = "customersupport@icicilombard.com";
 
-    // Check if username already exists
-    this.http.get<any[]>(`http://localhost:3000/users?username=${username}`).subscribe(users => {
-      if (users.length > 0) {
-        alert('Username already exists!');
-      } else {
-        this.http.post('http://localhost:3000/users', this.signupForm.value).subscribe(() => {
-          alert('Signup successful!');
-          this.router.navigate(['/login']);
-        });
-      }
-    });
+    public companies = [
+    'ICICI Group',
+    'ICICI Bank',
+    'ICICI Prudential Life Insurance',
+    'ICICI Prudential Mutual Fund',
+    'ICICI Direct',
+    'ICICI Lombard General Insurance',
+    'ICICI Securities'
+  ];
+  selectedCompany = '';
   }
 
 
@@ -45,7 +38,7 @@ constructor(
 
    
 
-}
+
 
 
   

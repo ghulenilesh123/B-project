@@ -1,7 +1,7 @@
 .button {
   padding: $padding;
   background-color: $primary-color;
-  border: 3px solid red;
+  border: 3px solid rgb(16, 0, 0);
   @include flex-center;
 
  

@@ -1,4 +1,49 @@
-:host{
-    display: block;
+/* footer in css */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
 
+.bgColorFooter {
+  background-color: #ece9e9;
+  height: 300px;
+
+}
+
+.social-links {
+  display: inline-block;
+  padding: 2rem 0 0;
+  width: 100%;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 4rem;
+  float: left;
+  height: 2rem;
+  width: 2rem;
+}
+
+a {
+  outline: none !important;
+}
+
+.container-footer {
+  position: absolute;
+  padding-left: 104px;
+  width: 614px;
+  /* border: 2px solid; */
+}
+
+.footer-container-second {
+  position: absolute;
+  padding-left: 600px;
+}
+
+.group-companies{
+  position: relative;
+  padding-right: 130px;
+  float: right;
+  margin-top: -60px;
 }

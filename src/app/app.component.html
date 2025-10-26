@@ -1,4 +1,4 @@
- <div class="container-fluid" *ngIf="showHeader" >
+<div class="container-fluid" *ngIf="showHeader">
   <nav class="navbar navbar-expand-lg  bg ">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">all compo
@@ -118,21 +118,38 @@
           </ul>
         </li>
 
+        <li class="nav-item dropdown b">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">angular 16 F</a>
+          <ul class="dropdown-menu">
+            <li> <a class="dropdown-item" routerLink="signals">signals</a></li>
+            <li> <a class="dropdown-item" routerLink="standalone">standalone</a></li>
+          </ul>
+        </li>
+         
+
+         <li>
+          <a class="nav-link b" routerLink="ngrx">NGRX</a>
+        </li>
+        <li>
+          <a class="nav-link b" routerLink="lgn">jwt</a>
+        </li>
+
 
       </ul>
     </div>
     <div>
       <button class="button" (click)="logout()">logout</button>
 
-    </div> 
+    </div>
   </nav>
-  </div>
+</div>
+
+
+
+
+<!-- <app-signals></app-signals> -->
+<!-- <app-standalone></app-standalone> -->
 <router-outlet></router-outlet>
- <!-- <app-login-a></app-login-a> -->
+<!-- <app-login-a></app-login-a> -->
 
-
-
- <button class="button"> testing</button>
-  
-
-  

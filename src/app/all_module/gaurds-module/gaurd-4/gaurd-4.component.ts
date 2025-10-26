@@ -9,9 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 export class Gaurd4Component {
   
   constructor(private act:ActivatedRoute){
-
+     
     this.act.data.subscribe((res:any)=>{
-      console.log(res[0][1])
+      console.log(res[0][4])
     })
+    console.log("hello")
   }
 }

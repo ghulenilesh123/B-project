@@ -29,10 +29,16 @@ import { LoginAComponent } from './login-a/login-a.component';
 import { SassCompoComponent } from './ALL-css-pattern/sass-compo/sass-compo.component';
 import { LessCompoComponent } from './ALL-css-pattern/less-compo/less-compo.component';
 import { ScssCompoComponent } from './ALL-css-pattern/scss-compo/scss-compo.component';
+import { SignalsComponent } from './angular_16/signals/signals.component';
+import { StandaloneComponent } from './angular_16/standalone/standalone.component';
+import { SingleTripComponent } from './all_module/travel-module/single-trip/single-trip.component';
+import { NgrxCompoComponent } from './NGRX/ngrx-compo/ngrx-compo.component';
+import { LoginComponent } from './interceptor/jwt_token/login/login.component';
+import { myloadGuards } from './guards/my-guards.guard';
 
 const rot: Routes = [
-  {path:"",component:LoginAComponent},
-  // {path:"",component:FLoginComponent},
+  // {path:"",component:LoginAComponent},
+  {path:"",component:FLoginComponent},
   { path: "home", component: HomeComponent },
   { path: "motor", component: MotorInsuranceComponent },
   // {path:"crpr",component:CorporateComponent},
@@ -56,6 +62,10 @@ const rot: Routes = [
   { path: "scss", component: ScssCompoComponent},
   { path: "less", component:LessCompoComponent },
   { path: "sass", component:SassCompoComponent },
+  {path: 'signals', component:SignalsComponent},
+  {path: 'standalone', component:StandaloneComponent},
+  {path: 'ngrx', component:NgrxCompoComponent},
+  {path: 'lgn', component:LoginComponent},
 
   { path: "car/:input", component: CarDatailsComponent },
 
@@ -77,7 +87,7 @@ const rot: Routes = [
     path: 'motor_M',
     loadChildren: () => import('./all_module/motor-module/motor-module.module')
       .then(mod => mod.MotorModuleModule),
-      
+      canLoad:[myloadGuards]
   },
 
   {
@@ -94,7 +104,7 @@ const rot: Routes = [
     .then(module=>module.GaurdsModuleModule)
    },
 
-  { path: "**", redirectTo: "" }, // wild card 
+  // { path: "**", redirectTo: "" }, // wild card 
 
 ];
 

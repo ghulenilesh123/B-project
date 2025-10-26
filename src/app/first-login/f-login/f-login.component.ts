@@ -53,21 +53,20 @@ export class FLoginComponent {
       // console.log('Login success:', this.loginForm.value);
       const { username, password, email } = this.loginForm.value;
 
-      this.loginService.login2(this.loginForm.value).subscribe((res: any) => {
-        console.log(res)
-      })
+     
       this.loginService.login(username, password,); // if value match then login method return true
 
     if (this.loginService.isLoggedIn()) {           // if we have true value then naviget on home
       this.router.navigate(['home']);
+      
 
     } else {
-      this.loginForm.reset();
-      this.router.navigate(['']);                 // naviget in login 
       this.showLoginError = true;                 // show login error which writed in html
+      this.router.navigate(['']);                 // naviget in login 
+      this.loginForm.reset();
     }
   } else {
-  this
+  
   this.loginForm.markAllAsTouched(); // shows validation messages
   console.log(alert("please inter valid username and password"))
 
@@ -77,20 +76,30 @@ export class FLoginComponent {
   }
 
 onSubmit2() {
-  // console.log(this.myform2.value.password)
-    const password2 = this.myform2.value.password;
-    sessionStorage.setItem("password2",password2)
+  if (this.myform2.valid) {
+      // console.log('Login success:', this.loginForm.value);
+      const {password} = this.myform2.value;
 
-    this.http.get<any[]>('http://localhost:3000/users', {
-      params: { password2 }
-    }).subscribe(users => {
-      if (users.length > 0) {
-        this.recive = users[0]
-        console.log(this.recive)
-      } else {
-        console.log(" No match. Wrong password.");
-      }
-    });
-  }
- 
+     
+      this.loginService.login2( password); // if value match then login method return true
+
+    if (this.loginService.isLoggedIn()) {           // if we have true value then naviget on home
+      this.router.navigate(['home']);
+      
+
+    } else {
+      this.showLoginError = true;                 // show login error which writed in html
+      this.router.navigate(['']);                 // naviget in login 
+      this.myform2.reset();
+    }
+  } else {
+  
+  this.myform2.markAllAsTouched(); // shows validation messages
+  console.log(alert("please inter valid username and password"))
+
+}
+
+
+}
+
 }

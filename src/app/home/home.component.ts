@@ -10,8 +10,8 @@ export class HomeComponent {
 public xyz:any=''
   datafromhome:any="data from home to health"
 constructor( private login:LoginServiceService){
+  console.log("home compo")
     sessionStorage.setItem('token','generating token =>[xcvcxasw123sdc]');
-
 }
 
 reaciveEvent(event:any){

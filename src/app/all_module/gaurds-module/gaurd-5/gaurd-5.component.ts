@@ -7,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class Gaurd5Component {
 
-  ismydurty: boolean = true;
+  ismyformdurty: boolean = true;
 
   CanDeactivate() {
-    return this.ismydurty
+    return this.ismyformdurty
       ? confirm("you want leave this page")
       : true;
   }

@@ -8,7 +8,7 @@ import { LoginServiceService } from './all_service/service/login-service.service
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public showHeader: boolean= false;
+  public showHeader: any
   // public username:any="nilesh";
   // public password:any="123";
 
@@ -19,14 +19,15 @@ export class AppComponent {
     // implemnting this logic for authentication to show header 
     this.router.events.subscribe((res:any)=>{
       if(res instanceof NavigationEnd){
-        console.log("Hello I am checkig the routes");
+        // console.log("Hello I am checkig the routes");
         // debugger;
         this.showHeader = this.loginService.isLoggedIn();
       // if user is lodded in then only navigate to home otherwise it will navigate to login page 
         // this.showHeader ? this.router.navigate(['home']) : this.router.navigate([''])
         // this.loginService.login(this.username,this.password)
         if(this.showHeader)
-          false
+       true
+
         else
           this.logout()
       }

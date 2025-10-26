@@ -10,13 +10,13 @@ export class CarDatailsComponent {
 
   constructor(private act: ActivatedRoute) {
     // this.printData()
-    this.printData2()
-    this.printData3()
+    // this.printData2()
+    // this.printData3()
     this.printData4()
   }
 
   printData() {
-    let data = this.act.snapshot
+    // let data = this.act.snapshot
     console.log(this.act.snapshot)
     console.log(this.act.snapshot.params['input'])
   }
@@ -36,7 +36,7 @@ export class CarDatailsComponent {
   printData4(){
     console.log(this.act.queryParamMap)
     this.act.queryParamMap.subscribe((res:any)=>{
-      console.log(res)
+      // console.log(res)
       let data1 =res.get('name')
       let data2 =res.get('lname')
       console.log(data1,data2)

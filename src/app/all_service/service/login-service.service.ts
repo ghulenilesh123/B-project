@@ -30,8 +30,10 @@ export class LoginServiceService {
     }
   }
   
-  login2(dt:any){
-  return this.http.post("http://localhost:3000/users",dt)
+  login2(password:any){
+  if (password == '123'){
+    this.loggedin=true
+  }
 }
 // getlogindata(password:any){
 //   return this.http.get("http://localhost:3000/user"+password)

@@ -37,7 +37,7 @@ import { ChartJsComponent } from './Library/chart-js/chart-js.component';
 import { CookieService } from 'ngx-cookie-service';
 import { MiscChildComponent } from './misc/misc-child/misc-child.component';
 import { MiscParentComponent } from './misc/misc-parent/misc-parent.component';
-import { AuthInterceptor } from './all_service/service/auth.interceptor';
+import { AuthInterceptor } from './interceptor/jwt_token/auth.interceptor';
 import { MiscChild2Component } from './misc/misc-child2/misc-child2.component';
 import { TestComponent } from './practice_compo/test/test.component';
 // import { FirtLoginComponent } from './first-login/first-login.component';
@@ -47,6 +47,11 @@ import { LoginAComponent } from './login-a/login-a.component';
 import { SassCompoComponent } from './ALL-css-pattern/sass-compo/sass-compo.component';
 import { LessCompoComponent } from './ALL-css-pattern/less-compo/less-compo.component';
 import { ScssCompoComponent } from './ALL-css-pattern/scss-compo/scss-compo.component';
+import { SignalsComponent } from './angular_16/signals/signals.component'; 
+import { StandaloneComponent } from './angular_16/standalone/standalone.component';
+import { StoreModule } from '@ngrx/store';
+import { counterreducer } from './NGRX/counter.reducer';
+import { NgrxCompoComponent } from './NGRX/ngrx-compo/ngrx-compo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -81,6 +86,9 @@ import { ScssCompoComponent } from './ALL-css-pattern/scss-compo/scss-compo.comp
     SassCompoComponent,
     LessCompoComponent,
     ScssCompoComponent,
+    SignalsComponent,
+    StandaloneComponent,
+    NgrxCompoComponent
   ],
   imports: [
     BrowserModule,
@@ -93,16 +101,15 @@ import { ScssCompoComponent } from './ALL-css-pattern/scss-compo/scss-compo.comp
     MatButtonModule,
     MatInputModule,
     ButtonModule,
-    NgChartsModule
+    NgChartsModule,
+    //ngrx
+    StoreModule.forRoot({ counter:counterreducer}, {})
 
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass:AuthInterceptor,
-      multi: true,
-      
-    },
+   
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  
     
   ],
   bootstrap: [AppComponent],//CookieService

@@ -60,7 +60,7 @@ $mywight: white;
 .card {
   background-color: $mybroun;
   color: $mywight;
-//   padding: calculate-rem(32);     // 2rem
+  padding: calculate-rem(32);     // 2rem
   margin: calculate-rem(16);      // 1rem
   font-size: calculate-rem(18);   // 1.125rem
   border-radius: calculate-rem(8); // 0.5rem
